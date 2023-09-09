@@ -1,0 +1,18 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import './index.css'
+import { TodosProvider } from './store/todos.tsx'
+import { BrowserRouter } from 'react-router-dom'
+
+//we have to wrap every time with <BrowserRouter> if we are using rect router dom.
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  
+  <React.StrictMode>
+    <BrowserRouter>   
+    <TodosProvider>
+    <App />
+    </TodosProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+)
